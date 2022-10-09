@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+// font variables
+$h_font: Bebas Neue;
+$p_font: Helvetica, Arial, sans-serif;
+
+// color variables
+$trunk_color:#272719;
+$tree_color:#587D71;
+$grass_color:#4DAA57;
+$sky_color: #8AF3FF;
+$sun_color: #F4D35E;
+
+@mixin center {
+    margin: auto;
+    text-align: center;
+    max-width: 960px;
+    padding: 1em;
+}
