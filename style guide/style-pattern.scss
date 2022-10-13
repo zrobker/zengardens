@@ -7,16 +7,17 @@
   box-sizing: border-box;
 }
 html {
-  background-color: $sky_color;
+  background-color: $background-color;
   padding: 5%;
 }
 
 body {
-  font-family: $p_font;
+  font-family: $fonts-body;
   font-size: 85%;
-  color: $trunk_color;
-  background-color: $tree_color;
-  @include center;
+  color: $text-dark;
+  background-color: $primary;
+  margin: 0;
+  padding: 1em;
 }
 
 section {
@@ -41,19 +42,16 @@ section {
   border: 1px solid;
 }
 .primary {
-  background-color: $sky_color;
+  background-color: $primary;
 }
 .accent1 {
-  background-color: $grass_color;
+  background-color: $accent1;
 }
 .accent2 {
-  background-color: $tree_color;
-}
-.text-light {
-  background-color: $sun_color;
+  background-color: $accent2;
 }
 .text-dark {
-  background-color: $trunk_color;
+  background-color: $text-dark;
 }
 .element {
   border: 1px solid;
