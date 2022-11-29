@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+html {
+  background-color: #daede2;
+}
+
+body {
+  font-family: helvetica;
+  font-size: 85%;
+  color: #272719;
+  background-color: #8AF3FF;
+  margin: 0;
+  padding: 1em;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 152px);
+}
+
+.intro {
+  grid-area: 1/4/5/8;
+}
+.intro header {
+  text-align: center;
+}
+
+#zen-supporting {
+  grid-area: 4/6/10/11;
+}
+
+.sidebar {
+  text-align: center;
+  grid-area: 4/2/10/4;
+}
+.sidebar li {
+  margin-bottom: 60px;
+}
+
+/*# sourceMappingURL=style.css.map */
