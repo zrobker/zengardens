@@ -1,49 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-h1 {
-  background-image: url(./images/cloud2.svg);
-  height: 500px;
-  background-repeat: no-repeat;
-  border: 1px solid;
-  padding-top: 150px;
-  font-size: 2em;
-}
+/* Error: expected "{".
+ *    ,
+ * 25 | <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+ *    |  ^
+ *    '
+ *   _mixins.scss 25:2  @use
+ *   style.scss 2:1     root stylesheet */
 
-html {
-  background-color: #daede2;
-}
-
-body {
-  font-family: helvetica;
-  font-size: 85%;
-  color: #272719;
-  background-color: #8AF3FF;
-  margin: 0;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
   padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "{".\a    \2577 \a 25 \2502  <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\d\a    \2502   ^\a    \2575 \a   _mixins.scss 25:2  @use\a   style.scss 2:1     root stylesheet';
 }
-
-.page-wrapper {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 152px);
-}
-
-.intro {
-  grid-area: 1/4/5/8;
-}
-.intro header {
-  text-align: center;
-}
-
-#zen-supporting {
-  grid-area: 4/6/10/11;
-}
-
-.sidebar {
-  text-align: center;
-  grid-area: 4/2/10/4;
-}
-.sidebar li {
-  margin-bottom: 60px;
-}
-
-/*# sourceMappingURL=style.css.map */

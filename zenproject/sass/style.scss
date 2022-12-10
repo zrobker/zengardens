@@ -1,3 +1,35 @@
 @use "variables" as *; 
 @use 'mixins';
-@use 'content-layout';
+
+
+
+body{
+    font-family: $fonts-body;
+    margin: 0 auto;
+    text-align: center;
+    h1, h2, h3, h4{
+      font-family: $fonts-headline;
+    }
+    .intro {
+      padding: 10em 1em 10em 1em;
+      
+      animation: sky-changing 15s linear infinite;
+      &::before{
+        content: "";
+        position: fixed;
+        background: url(../images/sunandmoon.svg) center top no-repeat;
+    }
+      header {    
+        padding-bottom: 5em;
+      }
+      .preamble {
+        background: img;
+        padding-bottom: 3em;
+      }
+    }
+    #zen-supporting {
+      background: #4DAA57;
+      
+    }
+  }
+  
