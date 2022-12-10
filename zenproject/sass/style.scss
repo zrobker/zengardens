@@ -1,34 +1,79 @@
 @use "variables" as *; 
 @use 'mixins';
 
-
+// media anything bigger than 600px
 
 body{
+    & a:link {
+      color: rgb(255, 255, 0);
+    }
     font-family: $fonts-body;
-    margin: 0 auto;
+    font-size: 4vw;
     text-align: center;
+    margin: 0 auto;
     h1, h2, h3, h4{
       font-family: $fonts-headline;
+      font-size: 6vw;
+    }
+    h1 {
+      font-size: 7vw;
     }
     .intro {
-      padding: 10em 1em 10em 1em;
-      
-      animation: sky-changing 15s linear infinite;
+      // position: relative;
       &::before{
         content: "";
-        position: fixed;
-        background: url(../images/sunandmoon.svg) center top no-repeat;
-    }
-      header {    
-        padding-bottom: 5em;
+        position: absolute;
+        z-index: 0;
+        bottom: 0%;
+        left: -50%;
+        height: 100%;
+        width: 200%;
+        background: url(./images/sunandmoon.svg) center top no-repeat;
+        animation: sun-cycle 30s linear infinite;
       }
+      header, .summary {
+        animation: sky-changing 30s linear infinite;     
+      }
+      header {
+        padding-top: 10em;
+        padding-bottom: .5em;
+        margin-bottom: -10px;
+      }
+      .summary {
+        padding: 1em;
+        margin-top: 0px;
+        padding-bottom: 11em;
+        position: relative;
+        &::after{
+          content: "";
+          position: absolute;
+          z-index: 1;
+          bottom: -15%;
+          left: 0%;
+          height: 100%;
+          width: 100%;
+          background: url(./images/mountains.svg) center top no-repeat;
+        }
+      }
+
       .preamble {
-        background: img;
-        padding-bottom: 3em;
+        position: relative;
+        z-index: 0;
+        padding: 1em 1em 3em 1em;
+        background-color: $text-dark;
+        & h3 {
+          font-size: 1.5em;
+          padding: 1.5em 0em 2em 0em;
+        }
+        & p {
+          color: white;
+        }
       }
     }
-    #zen-supporting {
-      background: #4DAA57;
+    div #zen-supporting {
+      padding-top: 1em;
+      background: $accent2;
+      z-index: 2;
       
     }
   }

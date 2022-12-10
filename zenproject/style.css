@@ -1,18 +1,117 @@
-/* Error: expected "{".
- *    ,
- * 25 | <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
- *    |  ^
- *    '
- *   _mixins.scss 25:2  @use
- *   style.scss 2:1     root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a    \2577 \a 25 \2502  <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\d\a    \2502   ^\a    \2575 \a   _mixins.scss 25:2  @use\a   style.scss 2:1     root stylesheet';
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@keyframes sky-changing {
+  0% {
+    background-color: darkblue;
+    color: white;
+  }
+  10% {
+    color: orange;
+  }
+  20% {
+    color: black;
+  }
+  25% {
+    background-color: #8AF3FF;
+  }
+  50% {
+    background-color: rgb(221, 243, 252);
+  }
+  75% {
+    background-color: #8AF3FF;
+  }
+  70% {
+    color: black;
+  }
+  85% {
+    color: orange;
+  }
+  100% {
+    background-color: darkblue;
+    color: white;
+  }
 }
+@keyframes sun-cycle {
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body {
+  font-family: helvetica;
+  font-size: 4vw;
+  text-align: center;
+  margin: 0 auto;
+}
+body a:link {
+  color: rgb(255, 255, 0);
+}
+body h1, body h2, body h3, body h4 {
+  font-family: "Bebas Neue";
+  font-size: 6vw;
+}
+body h1 {
+  font-size: 7vw;
+}
+body .intro::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  bottom: 0%;
+  left: -50%;
+  height: 100%;
+  width: 200%;
+  background: url(./images/sunandmoon.svg) center top no-repeat;
+  animation: sun-cycle 30s linear infinite;
+}
+body .intro header, body .intro .summary {
+  animation: sky-changing 30s linear infinite;
+}
+body .intro header {
+  padding-top: 10em;
+  padding-bottom: 0.5em;
+  margin-bottom: -10px;
+}
+body .intro .summary {
+  padding: 1em;
+  margin-top: 0px;
+  padding-bottom: 11em;
+  position: relative;
+}
+body .intro .summary::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -15%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background: url(./images/mountains.svg) center top no-repeat;
+}
+body .intro .preamble {
+  position: relative;
+  z-index: 0;
+  padding: 1em 1em 3em 1em;
+  background-color: #272719;
+}
+body .intro .preamble h3 {
+  font-size: 1.5em;
+  padding: 1.5em 0em 2em 0em;
+}
+body .intro .preamble p {
+  color: white;
+}
+body div #zen-supporting {
+  padding-top: 1em;
+  background: #587D71;
+  z-index: 2;
+}
+
+/*# sourceMappingURL=style.css.map */

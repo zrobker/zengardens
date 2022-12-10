@@ -2,54 +2,50 @@
 
 
 @keyframes sky-changing {
-    0% {}
-    25% {
-      background-color: white;
-    }
-    50% { /* now change to white square...but don't start rotating yet! */
-      border-radius: 0%;
+    0% {
       background-color: darkblue;
+      color: white;
     }
-    75% { /* stay a white square, but rotate 90deg */
-      border-radius: 0%;
-      background-color: white;
+    10% {
+      color: orange;
     }
-    100% { /* stay rotated at 90, but change back to a circle */
-      border-radius: 0%;
-      background-color: lightblue;
+    20% {
+      color: black;
+    }
+    25% {
+      background-color: $primary;
+    }
+    50% {
+      background-color: rgb(221, 243, 252);
+    }
+    75% {
+      background-color: $primary;
+    }
+    70% {
+      color: black;
+    }
+    85% {
+      color: orange;
+    }
+    100% {
+      background-color: darkblue;
+      color: white;
     }
   }
 
-  @mixin sunandmoon{
-    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-    <svg width="100%" height="100%" viewBox="0 0 3000 4500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g transform="matrix(1.719,0,0,1.719,-743.945,-885.013)">
-        <circle cx="1320.5" cy="830.635" r="290.754"/>
-    </g>
-    <g transform="matrix(1.719,0,0,1.719,-780.48,2557.52)">
-        <circle cx="1320.5" cy="830.635" r="290.754" style="fill:rgb(255,166,0);"/>
-    </g>
-    <g transform="matrix(1.67419,0,0,1.67419,-716.754,-856.084)">
-        <circle cx="1320.5" cy="830.635" r="290.754" style="fill:rgb(147,147,147);"/>
-    </g>
-    <g transform="matrix(1.67419,0,0,1.67419,79.1466,-543.409)">
-        <circle cx="813.982" cy="827.805" r="41.738" style="fill:rgb(75,72,72);"/>
-    </g>
-    <g transform="matrix(1.67419,0,0,1.67419,-224.054,-875.034)">
-        <circle cx="813.982" cy="827.805" r="41.738" style="fill:rgb(75,72,72);"/>
-    </g>
-    <g transform="matrix(1.67419,0,0,1.67419,339.709,-723.434)">
-        <circle cx="813.982" cy="827.805" r="41.738" style="fill:rgb(75,72,72);"/>
-    </g>
-    <g transform="matrix(1.67419,0,0,1.67419,372.872,-1050.32)">
-        <circle cx="813.982" cy="827.805" r="41.738" style="fill:rgb(75,72,72);"/>
-    </g>
-    <g transform="matrix(1.67419,0,0,1.67419,83.8841,-1121.38)">
-        <circle cx="813.982" cy="827.805" r="41.738" style="fill:rgb(75,72,72);"/>
-    </g>
-    <g transform="matrix(1.67419,0,0,1.67419,-677.489,2595.92)">
-        <circle cx="1320.5" cy="830.635" r="290.754" style="fill:rgb(255,224,0);"/>
-    </g>
-</svg>
+  @keyframes sun-cycle {
+    0% {}
+    25% {
+      transform: rotate(90deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    75% { 
+      transform: rotate(270deg);
+    }
+    100% { 
+      transform: rotate(360deg);
+    }
+    
   }
