@@ -1,5 +1,6 @@
 @use "variables" as *; 
 @use 'mixins';
+@use 'big-layout';
 
 // media anything bigger than 750px
 html, body{
@@ -18,11 +19,12 @@ body{
     font-size: 4vw;
     text-align: center;
     margin: 0 auto;
-    h1, h2, h3, h4{
+    h2, h3, h4{
       font-family: $fonts-headline;
       font-size: 6vw;
     }
     h1 {
+      font-family: $fonts-headline;
       font-size: 7vw;
     }
     .intro {
