@@ -10,6 +10,7 @@ html, body{
   padding: 0px;
   overflow-x: hidden;
 }
+
 body{
     background-color: black;
     & a:link {
@@ -247,8 +248,4 @@ body{
         }
       }
     }
-  }
-  
-  @media screen and (min-width: 750px) {
-    
   }
