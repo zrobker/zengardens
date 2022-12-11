@@ -1,7 +1,7 @@
 @use "variables" as *; 
 @use 'mixins';
 
-// media anything bigger than 600px
+// media anything bigger than 750px
 html, body{
   width: 100%;
   height: 100%;
@@ -247,3 +247,6 @@ body{
     }
   }
   
+  @media screen and (min-width: 750px) {
+    
+  }
