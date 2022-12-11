@@ -2,7 +2,13 @@
 @use 'mixins';
 
 // media anything bigger than 600px
-
+html, body{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
 body{
     background-color: black;
     & a:link {
@@ -20,7 +26,7 @@ body{
       font-size: 7vw;
     }
     .intro {
-      // position: relative;
+      position: relative;
       &::before{
         content: "";
         position: absolute;
@@ -145,7 +151,8 @@ body{
     }
     .benefits {
       background-color: #C36948;
-      padding: 6em 1em 1em 1em;
+      padding: 7em 1em 1.5em 1em;
+      margin-bottom: -20px;
     }
     .requirements {
       background-color: #C36948;
@@ -163,7 +170,8 @@ body{
       }
     }
     footer {
-      padding: 3em 1em 10em 1em;
+      // margin-top: 30px;
+      padding: 4em 1em 9em 1em;
       background-color: #5D5D5D;
       position: relative;
       &::after{
@@ -181,7 +189,7 @@ body{
     aside {
       animation: pulse 20s ease-in-out infinite;
       background-color: #0096FF;
-      padding: 1em;
+      padding:1em;
       padding-bottom: 0;
       ul {
         list-style-type: none;

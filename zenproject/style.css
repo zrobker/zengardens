@@ -89,6 +89,14 @@
     transform: translate(0, 0);
   }
 }
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
 body {
   background-color: black;
   font-family: helvetica;
@@ -105,6 +113,9 @@ body h1, body h2, body h3, body h4 {
 }
 body h1 {
   font-size: 7vw;
+}
+body .intro {
+  position: relative;
 }
 body .intro::before {
   content: "";
@@ -227,7 +238,8 @@ body .participation h3::after {
 }
 body .benefits {
   background-color: #C36948;
-  padding: 6em 1em 1em 1em;
+  padding: 7em 1em 1.5em 1em;
+  margin-bottom: -20px;
 }
 body .requirements {
   background-color: #C36948;
@@ -245,7 +257,7 @@ body .requirements::after {
   background: url(./images/rocks.svg) center top no-repeat;
 }
 body footer {
-  padding: 3em 1em 10em 1em;
+  padding: 4em 1em 9em 1em;
   background-color: #5D5D5D;
   position: relative;
 }
