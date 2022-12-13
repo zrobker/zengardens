@@ -1,6 +1,126 @@
 @use 'variables' as *;
 
 
+/*--svgs for backgrounds--*/
+@mixin sun-moon{
+  content: "";
+  position: absolute;
+  z-index: 0;
+  bottom: 0%;
+  left: -50%;
+  height: 100%;
+  width: 200%;
+  background: url(./images/sunandmoon.svg) center top no-repeat;
+  animation: sun-cycle 30s linear infinite;
+}
+
+@mixin mountains{
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -15%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background: url(./images/mountains.svg) center top no-repeat;
+}
+
+@mixin treetops{
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -65%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background: url(./images/treetops.svg) center top no-repeat;
+}
+
+@mixin hills-flowers{
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -65%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background: url(./images/hillswithflowers.svg) center top no-repeat;
+}
+
+@mixin hillswithpath {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -85%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background: url(./images/hillswithpath.svg) center top no-repeat;
+}
+
+@mixin purple-flower{
+  padding: 5%;
+  position: absolute;
+  content: "";
+  z-index: 1;
+  bottom: 5%;
+  left: -40%;
+  height: 100%;
+  width: 100%;
+  background: url(./images/purpleflower.svg) center top no-repeat;
+  animation: sun-cycle 30s linear infinite;
+}
+
+@mixin red-flower{
+  padding: 5%;
+  position: absolute;
+  content: "";
+  z-index: 1;
+  bottom: 5%;
+  left: 30%;
+  height: 100%;
+  width: 100%;
+  background: url(./images/redflower.svg) center top no-repeat;
+  animation: sun-cycle 15s linear infinite;
+}
+
+@mixin rocks{
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -80%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background: url(./images/rocks.svg) center top no-repeat;
+}
+
+@mixin water{
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -10%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background: url(./images/water.svg) center top no-repeat;
+  animation: waterbank 20s ease-in-out infinite;
+}
+
+@mixin wood{
+  padding: 20%;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -50%;
+  left: -20%;
+  height: 100%;
+  width: 100%;
+  background: url(./images/wood.svg) center top no-repeat;
+}
+
+
+/*--animation keyframes--*/
 @keyframes sky-changing {
     0% {
       background-color: darkblue;
